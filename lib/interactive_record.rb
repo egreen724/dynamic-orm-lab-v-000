@@ -59,8 +59,8 @@ class InteractiveRecord
   def self.find_by(options={})
 
     options.each do |property, value|
-      self.send("#{property}=", value)
-      @property = property.to_s 
+      self.send("#{property.to_s}=", value)
+      @property = property 
       @value = value 
     end 
     
