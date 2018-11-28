@@ -62,7 +62,6 @@ class InteractiveRecord
       self.send("#{property}=", value)
       @property = property.to_s 
       @value = value 
-      binding.pry 
     end 
     
     sql = "SELECT * FROM #{self.table_name} WHERE #{@property} = #{@value}"
