@@ -60,8 +60,8 @@ class InteractiveRecord
 
     options.each do |property, value|
       binding.pry 
-      self.send("#{property}=", "#{value}")
-      @property = property
+      self.send("#{property}=", value)
+      @property = property.to_s 
       @value = value 
       binding.pry 
     end 
