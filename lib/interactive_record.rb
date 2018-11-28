@@ -17,7 +17,6 @@ class InteractiveRecord
     column_names = []
     table_info.each do |column|
       column_names << column["name"]
-      binding.pry 
     end
     column_names.compact
   end
