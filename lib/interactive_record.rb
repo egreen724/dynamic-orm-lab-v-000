@@ -61,7 +61,7 @@ class InteractiveRecord
     # "SQL to WHERE" 
     # for each option add key and value pair to SQL string 
 
-  sql = "SELECT * FROM #{self.table_name} WHERE #{@property} = #{@value}"
+  sql = "SELECT * FROM #{self.table_name} WHERE" 
     options.each do |property, value|
       self.send("#{property.to_s}=", value)
       @property = property 
