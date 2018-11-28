@@ -57,7 +57,7 @@ class InteractiveRecord
   end
   
   def self.find_by(options={})
-    binding.pry
+
     options.each do |property, value|
       self.send("#{property}=", value)
       @property = property
@@ -65,7 +65,7 @@ class InteractiveRecord
       binding.pry 
     end 
     
-    sql = "SELECT * FROM #{self.table_name} WHERE #{property} = #{value}"
+    sql = "SELECT * FROM #{self.table_name} WHERE #{@property} = #{@value}"
     
     DB[:conn].execute(sql)
   end 
