@@ -65,9 +65,7 @@ class InteractiveRecord
     options.each do |property, value|
       sql << "#{property.to_s} = '#{value}'"
     end 
-     
-    #sql = "SELECT * FROM #{self.table_name} WHERE #{@property} = #{@value}"
-    
+   
     DB[:conn].execute(sql)
   end 
   
