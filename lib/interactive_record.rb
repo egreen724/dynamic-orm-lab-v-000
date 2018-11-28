@@ -63,7 +63,7 @@ class InteractiveRecord
 
   sql = "SELECT * FROM #{self.table_name} WHERE " 
     options.each do |property, value|
-      sql << "#{property.to_s} = #{value}"
+      sql << "#{property.to_s} = '#{value}'"
     end 
     binding.pry 
     #sql = "SELECT * FROM #{self.table_name} WHERE #{@property} = #{@value}"
