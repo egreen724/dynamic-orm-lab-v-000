@@ -42,6 +42,7 @@ class InteractiveRecord
       binding.pry 
     end
     values.join(", ")
+    binding.pry 
   end
   
   
