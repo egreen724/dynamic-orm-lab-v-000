@@ -57,7 +57,11 @@ class InteractiveRecord
   end
   
   def self.find_by(options={})
+    
+    # "SQL to WHERE" 
+    # for each option add key and value pair to SQL string 
 
+  sql = "SELECT * FROM #{self.table_name} WHERE #{@property} = #{@value}"
     options.each do |property, value|
       self.send("#{property.to_s}=", value)
       @property = property 
